@@ -1,0 +1,39 @@
+table,
+td,
+tr,
+th {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+  background-color: pink;
+}
+body {
+  background-color: lemonchiffon;
+}
+header h1 {
+  background-color: lightpink;
+}
+#info {
+  border: 3px dashed purple;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: lavenderblush;
+}
+.highlight {
+  font-weight: bold;
+  color: darkblue;
+  background-color: lightyellow;
+}
+#animals{
+  border: 3px dashed purple;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: lavenderblush;
+}
+.txt {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+}
