@@ -9,6 +9,20 @@
         padding: 0;
         background-color: #f0f8ff;
         color: #333;
+        line-height: 1.6;
+      }
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #000;
+        color: #fff;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 100;
+      }
+      .skip-link:focus {
+        top: 6px;
       }
       header {
         background-color: #007bff;
@@ -50,8 +64,11 @@
         color: #007bff;
         text-decoration: none;
       }
-      a:hover {
+      a:hover,
+      a:focus {
         text-decoration: underline;
+        outline: 2px solid #007bff;
+        outline-offset: 2px;
       }
       .projects img {
         width: 200px;
@@ -59,71 +76,64 @@
         border-radius: 10px;
         margin: 10px;
       }
-      footer {
-        text-align: center;
-        padding: 20px;
-        background-color: #007bff;
-        color: white;
-      }
     </style>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header>
       <h1>Yared Sintayehu</h1>
       <img src="images/ethiopia.jpg" alt="Ethiopia Flag" />
     </header>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello! I am Yared Sintayehu, a 16-year-old student at Arlington Career
-        Center. I am Ethiopian, and my favorite color is blue. I love drawing,
-        sleeping, and eating delicious food!
-      </p>
-      <p>Some of my favorite Ethiopian dishes include:</p>
-      <img src="images/dorowat.jpeg" alt="Dorowat" style="width: 200px" />
-      <img src="images/tibs.jpeg" alt="Tibs" style="width: 200px" />
-    </section>
+    <main id="main">
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>
+          Hello! I am Yared Sintayehu, a 16-year-old student at Arlington Career
+          Center. I am Ethiopian, and my favorite color is blue. I love drawing,
+          sleeping, and eating delicious food!
+        </p>
+        <p>Some of my favorite Ethiopian dishes include:</p>
+        <img src="images/dorowat.jpeg" alt="Dorowat" style="width: 200px" />
+        <img src="images/tibs.jpeg" alt="Tibs" style="width: 200px" />
+      </section>
 
-    <section id="projects">
-      <h2>My Projects</h2>
-      <p>I'm currently working on several exciting projects:</p>
-      <ul>
-        <li>
-          <a href="practice/zoo/index.html">Zoo Website</a> - A fun website
-          about animals at the city zoo.
-        </li>
-        <li>
-          <a href="practice/ice_cream_form.html">Ice Cream Page</a> - An
-          interactive form for ordering ice cream.
-        </li>
-        <li>
-          <a href="projects/encryption/README.md">Encryption Projects</a> -
-          Exploring RSA and Caesar cipher encryption techniques.
-        </li>
-      </ul>
-    </section>
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">My Projects</h2>
+        <p>I'm currently working on several exciting projects:</p>
+        <ul>
+          <li>
+            <a href="practice/zoo/index.html">Zoo Website</a> - A fun website
+            about animals at the city zoo.
+          </li>
+          <li>
+            <a href="practice/ice_cream_form.html">Ice Cream Page</a> - An
+            interactive form for ordering ice cream.
+          </li>
+          <li>
+            <a href="projects/encryption/README.md">Encryption Projects</a> -
+            Exploring RSA and Caesar cipher encryption techniques.
+          </li>
+        </ul>
+      </section>
 
-    <section id="interests">
-      <h2>My Interests</h2>
-      <p>Besides coding, I enjoy:</p>
-      <ul>
-        <li>Drawing - I love expressing my creativity through art.</li>
-        <li>Sleep - Getting plenty of rest is important to me!</li>
-        <li>Food - Trying new dishes and cooking Ethiopian cuisine.</li>
-      </ul>
-    </section>
+      <section id="interests" aria-labelledby="interests-heading">
+        <h2 id="interests-heading">My Interests</h2>
+        <p>Besides coding, I enjoy:</p>
+        <ul>
+          <li>Drawing - I love expressing my creativity through art.</li>
+          <li>Sleep - Getting plenty of rest is important to me!</li>
+          <li>Food - Trying new dishes and cooking Ethiopian cuisine.</li>
+        </ul>
+      </section>
 
-    <section id="goals">
-      <h2>My Goals</h2>
-      <p>
-        My dream is to attend Cornell University and pursue a career in
-        technology or computer science.
-      </p>
-    </section>
-
-    <footer>
-      <p>&copy; 2024 Yared Sintayehu. All rights reserved.</p>
-    </footer>
+      <section id="goals" aria-labelledby="goals-heading">
+        <h2 id="goals-heading">My Goals</h2>
+        <p>
+          My dream is to attend Cornell University and pursue a career in
+          technology or computer science.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
