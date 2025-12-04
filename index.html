@@ -1,22 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Yared's Homepage</title>
+    <title>Yared Sintayehu's Portfolio</title>
     <style>
-      img {
-        width: 500px;
-        border-radius: 10px;
-        margin-right: 30px;
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f8ff;
+        color: #333;
       }
-      .username {
-        font-weight: bold;
+      header {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 3em;
+      }
+      header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+      section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      ul li {
+        margin: 10px 0;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .projects img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        margin: 10px;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #007bff;
+        color: white;
       }
     </style>
-    <script src="js/validate.js"></script>
   </head>
   <body>
-    <img src="../images/screenshot.png" alt="Yared's Photo" />
-    <p class="username">Hello, my name is Yared.</p>
-    <p>Welcome to my homepage!</p>
+    <header>
+      <h1>Yared Sintayehu</h1>
+      <img src="images/ethiopia.jpg" alt="Ethiopia Flag" />
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I am Yared Sintayehu, a 16-year-old student at Arlington Career
+        Center. I am Ethiopian, and my favorite color is blue. I love drawing,
+        sleeping, and eating delicious food!
+      </p>
+      <p>Some of my favorite Ethiopian dishes include:</p>
+      <img src="images/dorowat.jpeg" alt="Dorowat" style="width: 200px" />
+      <img src="images/tibs.jpeg" alt="Tibs" style="width: 200px" />
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <p>I'm currently working on several exciting projects:</p>
+      <ul>
+        <li>
+          <a href="practice/zoo/index.html">Zoo Website</a> - A fun website
+          about animals at the city zoo.
+        </li>
+        <li>
+          <a href="practice/ice_cream_form.html">Ice Cream Page</a> - An
+          interactive form for ordering ice cream.
+        </li>
+        <li>
+          <a href="projects/encryption/README.md">Encryption Projects</a> -
+          Exploring RSA and Caesar cipher encryption techniques.
+        </li>
+      </ul>
+    </section>
+
+    <section id="interests">
+      <h2>My Interests</h2>
+      <p>Besides coding, I enjoy:</p>
+      <ul>
+        <li>Drawing - I love expressing my creativity through art.</li>
+        <li>Sleep - Getting plenty of rest is important to me!</li>
+        <li>Food - Trying new dishes and cooking Ethiopian cuisine.</li>
+      </ul>
+    </section>
+
+    <section id="goals">
+      <h2>My Goals</h2>
+      <p>
+        My dream is to attend Cornell University and pursue a career in
+        technology or computer science.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Yared Sintayehu. All rights reserved.</p>
+    </footer>
   </body>
 </html>
