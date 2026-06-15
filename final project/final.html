@@ -1,76 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yared Sintayehu | Portfolio</title>
     <style>
-        
-        html, body, h1, h2, h3, p, ul, li, div, header, nav, main, section, article, footer {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      li,
+      div,
+      header,
+      nav,
+      main,
+      section,
+      article,
+      footer {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #121212;
+        color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+      a {
+        color: #4299e1;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        background-color: #1a1a1a;
+        border-bottom: 1px solid #2d3748;
+        position: relative;
+        z-index: 100;
+      }
+      nav {
+        height: 70px;
+      }
+      .logo {
+        float: left;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #f5f5f5;
+        line-height: 70px;
+        letter-spacing: 1px;
+      }
+      .nav-links {
+        float: right;
+        list-style: none;
+        line-height: 70px;
+      }
+      .nav-links li {
+        display: inline-block;
+        margin-left: 25px;
+      }
+      .nav-links a {
+        color: #a0aec0;
+        font-weight: bold;
+        font-size: 0.95rem;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
 
-        body {
-            background-color: #121212;
-            color: #f5f5f5;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
+      /* Hero Styles Added */
+      .hero {
+        padding: 80px 0 60px 0;
+        text-align: center;
+        border-bottom: 1px solid #2d3748;
+        background-color: #1a1a1a;
+      }
+      .avatar-container {
+        width: 110px;
+        height: 110px;
+        margin: 0 auto 24px auto;
+        border-radius: 55px;
+        background-color: #2d3748;
+        border: 2px solid #2d3748;
+        line-height: 106px;
+        color: #4299e1;
+        font-size: 2.2rem;
+        font-weight: bold;
+      }
+      .hero h1 {
+        font-size: 2.4rem;
+        margin-bottom: 12px;
+        letter-spacing: -0.5px;
+        color: #f5f5f5;
+      }
+      .hero p {
+        font-size: 1.05rem;
+        color: #a0aec0;
+        max-width: 600px;
+        margin: 0 auto 28px auto;
+      }
+      .social-tags {
+        text-align: center;
+      }
+      .badge {
+        display: inline-block;
+        background-color: #2d3748;
+        color: #e2e8f0;
+        border: 1px solid #2d3748;
+        padding: 5px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="portfolio-view" style="display: block">
+      <header>
+        <div class="container">
+          <nav class="clearfix">
+            <div class="logo">YARED SINTAYEHU</div>
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-        a {
-            color: #4299e1;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background-color: #1a1a1a;
-            border-bottom: 1px solid #2d3748;
-            position: relative;
-            z-index: 100;
-        }
-
-        nav {
-            height: 70px;
-        }
-
-        .logo {
-            float: left;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #f5f5f5;
-            line-height: 70px;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            float: right;
-            list-style: none;
-            line-height: 70px;
-        }
-
-        .nav-links li {
-            display: inline-block;
-            margin-left: 25px;
-        }
-
-        .nav-links a {
-            color: #a0aec0;
-            font-weight: bold;
-            font-size: 0.95rem;
-        }
-
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
+      <main>
+        <section class="hero" id="about">
+          <div class="container">
+            <div class="avatar-container">YS</div>
+            <h1>Yared Sintayehu</h1>
+            <p>
+              I am a student programmer interested in web development and car
+              mechanics. I enjoy creating choice-based logic paths in my code
+              and learning the fundamental concepts of basic vehicle
+              maintenance.
+            </p>
+            <div class="social-tags">
+              <span class="badge">Basic Auto Mechanics</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">HTML5 Canvas</span>
+              <span class="badge">CSS Flexbox</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
