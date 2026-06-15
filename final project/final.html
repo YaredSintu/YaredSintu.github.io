@@ -78,7 +78,6 @@
         display: table;
       }
 
-      /* Hero Styles Added */
       .hero {
         padding: 80px 0 60px 0;
         text-align: center;
@@ -123,6 +122,74 @@
         font-weight: bold;
         margin: 5px;
       }
+
+      .projects-section {
+        padding: 60px 0;
+      }
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+      .section-title-line {
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: #4299e1;
+        margin: 10px auto 0 auto;
+        border-radius: 2px;
+      }
+      .projects-grid {
+        width: 100%;
+      }
+      .project-card {
+        background-color: #222222;
+        border: 1px solid #2d3748;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: block;
+      }
+      .project-visual {
+        height: 160px;
+        background-color: #1a1a1a;
+        text-align: center;
+        border-bottom: 1px solid #2d3748;
+        padding-top: 15px;
+      }
+      .project-info {
+        padding: 24px;
+      }
+
+      /* New Card Typography Styles */
+      .project-tags {
+        margin-bottom: 12px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #4299e1;
+        letter-spacing: 0.5px;
+        margin-right: 10px;
+      }
+      .project-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #f5f5f5;
+      }
+      .project-desc {
+        color: #a0aec0;
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+        line-height: 1.5;
+      }
+      .project-link {
+        font-weight: bold;
+        font-size: 0.95rem;
+      }
     </style>
   </head>
   <body>
@@ -158,70 +225,29 @@
             </div>
           </div>
         </section>
-      </main>
-      <style>
-        .projects-section {
-          padding: 60px 0;
-        }
-        .section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-          text-align: center;
-          letter-spacing: 0.5px;
-        }
-        .section-title-line {
-          display: block;
-          width: 40px;
-          height: 3px;
-          background-color: #4299e1;
-          margin: 10px auto 0 auto;
-          border-radius: 2px;
-        }
-        .projects-grid {
-          width: 100%;
-        }
-        .project-card {
-          background-color: #222222;
-          border: 1px solid #2d3748;
-          border-radius: 8px;
-          margin-bottom: 30px;
-          width: 100%;
-          display: block;
-        }
-        .project-visual {
-          height: 180px;
-          background-color: #1a1a1a;
-          text-align: center;
-          border-bottom: 1px solid #2d3748;
-          padding-top: 45px;
-        }
-        .project-info {
-          padding: 24px;
-        }
-      </style>
-      <body>
-        <div id="portfolio-view" style="display: block">
-          <main>
-            <section class="projects-section" id="projects">
-              <div class="container">
-                <h2 class="section-title">
-                  Highlighted Projects<span class="section-title-line"></span>
-                </h2>
-                <div class="projects-grid" id="projectsGrid">
-                  <article class="project-card" id="card-games-1">
-                    <div class="project-visual"></div>
-                    <div class="project-info"></div>
-                  </article>
-                  <article class="project-card" id="card-mechanical-1">
-                    <div class="project-visual"></div>
-                    <div class="project-info"></div>
-                  </article>
+
+        <section class="projects-section" id="projects">
+          <div class="container">
+            <h2 class="section-title">
+              Highlighted Projects<span class="section-title-line"></span>
+            </h2>
+            <div class="projects-grid" id="projectsGrid">
+              <article class="project-card" id="card-games-1">
+                <div class="project-visual">
+                  <canvas id="gameCanvas" width="120" height="120"></canvas>
                 </div>
-              </div>
-            </section>
-          </main>
-        </div>
-      </body>
+                <div class="project-info"></div>
+              </article>
+              <article class="project-card" id="card-mechanical-1">
+                <div class="project-visual">
+                  <canvas id="autoCanvas" width="120" height="120"></canvas>
+                </div>
+                <div class="project-info"></div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
