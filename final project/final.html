@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yared Sintayehu | Portfolio</title>
+    <style>
+        /* ==========================================================================
+           BASE STYLES & RESET
+           ========================================================================== */
+        html, body, h1, h2, h3, p, ul, li, div, header, nav, main, section, article, footer {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #4299e1;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ==========================================================================
+           NAVIGATION BAR
+           ========================================================================== */
+        header {
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #2d3748;
+            position: relative;
+            z-index: 100;
+        }
+
+        nav {
+            height: 70px;
+        }
+
+        .logo {
+            float: left;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f5f5f5;
+            line-height: 70px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            float: right;
+            list-style: none;
+            line-height: 70px;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: #a0aec0;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* ==========================================================================
+           HERO SECTION (About Me)
+           ========================================================================== */
+        .hero {
+            padding: 80px 0 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #2d3748;
+            background-color: #1a1a1a;
+        }
+
+        .avatar-container {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 24px auto;
+            border-radius: 55px;
+            background-color: #2d3748;
+            border: 2px solid #2d3748;
+            line-height: 106px;
+            color: #4299e1;
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            color: #f5f5f5;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #a0aec0;
+            max-width: 600px;
+            margin: 0 auto 28px auto;
+        }
+
+        .social-tags {
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #2d3748;
+            color: #e2e8f0;
+            border: 1px solid #2d3748;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        /* ==========================================================================
+           PROJECTS GRID
+           ========================================================================== */
+        .projects-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title-line {
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #4299e1;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Filter buttons */
+        .filter-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background-color: #1a1a1a;
+            border: 1px solid #2d3748;
+            color: #a0aec0;
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin: 0 5px;
+        }
+
+        .filter-btn.active {
+            background-color: #4299e1;
+            color: #121212;
+            border-color: #4299e1;
+        }
+
+        .projects-grid {
+            width: 100%;
+        }
+
+        .project-card {
+            background-color: #222222;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            width: 100%;
+            display: block;
+        }
+
+        .project-visual {
+            height: 180px;
+            background-color: #1a1a1a;
+            text-align: center;
+            border-bottom: 1px solid #2d3748;
+            padding-top: 45px;
+        }
+
+        .project-info {
+            padding: 24px;
+        }
+
+        .project-tags {
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #4299e1;
+            letter-spacing: 0.5px;
+            margin-right: 10px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f5f5f5;
+        }
+
+        .project-desc {
+            color: #a0aec0;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .project-link {
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           MAINTENANCE LOG SCREEN STYLES
+           ========================================================================== */
+        .log-header {
+            padding: 40px 0;
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .log-container {
+            padding: 40px 0;
+        }
+
+        .log-meta {
+            background-color: #1a1a1a;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .meta-item {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .meta-label {
+            color: #4299e1;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .log-step {
+            background-color: #222222;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .step-num {
+            color: #4299e1;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            color: #f5f5f5;
+            margin-bottom: 10px;
+        }
+
+        .step-details {
+            color: #a0aec0;
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           FOOTER SECTION
+           ========================================================================== */
+        footer {
+            background-color: #1a1a1a;
+            border-top: 1px solid #2d3748;
+            padding: 40px 0;
+            text-align: center;
+            color: #a0aec0;
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           RESPONSIVE DESIGN BREAKPOINTS
+           ========================================================================== */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .logo {
+                float: none;
+                text-align: center;
+                display: block;
+                height: auto;
+                line-height: 40px;
+            }
+            .nav-links {
+                float: none;
+                text-align: center;
+                display: block;
+                line-height: 30px;
+            }
+            .nav-links li {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="portfolio-view" style="display: block;">
+        <header>
+            <div class="container">
+                <nav class="clearfix">
+                    <div class="logo">YARED SINTAYEHU</div>
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+            <section class="hero" id="about">
+                <div class="container">
+                    <div class="avatar-container">YS</div>
+                    <h1>Yared Sintayehu</h1>
+                    <p>
+                        I am a student programmer interested in web development and car mechanics. I enjoy creating choice-based logic paths in my code and learning the fundamental concepts of basic vehicle maintenance.
+                    </p>
+                    <div class="social-tags">
+                        <span class="badge">Basic Auto Mechanics</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">HTML5 Canvas</span>
+                        <span class="badge">CSS Flexbox</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects-section" id="projects">
+                <div class="container">
+                    <h2 class="section-title">
+                        Highlighted Projects
+                        <span class="section-title-line"></span>
+                    </h2>
+
+                    <div class="filter-container">
+                        <button class="filter-btn active" id="btn-all" onclick="showAll()">All</button>
+                        <button class="filter-btn" id="btn-games" onclick="showCategory('games')">Games</button>
+                        <button class="filter-btn" id="btn-mechanical" onclick="showCategory('mechanical')">Mechanical</button>
+                    </div>
+
+                    <div class="projects-grid" id="projectsGrid">
+                        
+                        <article class="project-card" id="card-games-1">
+                            <div class="project-visual">
+                                <svg width="90" height="90" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="65" r="23" fill="#cfba97" />
+                                    <rect x="25" y="60" width="50" height="5" fill="#c53030" />
+                                    <ellipse cx="50" cy="68" rx="33" ry="4" fill="#cfba97" />
+                                </svg>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Canvas</span>
+                                </div>
+                                <h3 class="project-title">One Piece: East Blue Legend</h3>
+                                <p class="project-desc">
+                                    A choice-based text-adventure game showcasing dynamic array handling, simple combat state variables, and clean Canvas graphics. Sail, face rival captains, and recruit crew members.
+                                </p>
+                                <a href="../YaredSintu.gitub.io/index.html" class="project-link" target="_blank">
+                                    Launch Project &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="project-card" id="card-mechanical-1">
+                            <div class="project-visual">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#4299e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                                </svg>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="tag">Maintenance</span>
+                                    <span class="tag">Hands-on</span>
+                                </div>
+                                <h3 class="project-title">Basic Oil & Fluid Maintenance</h3>
+                                <p class="project-desc">
+                                    A simple, hands-on log documenting the basic steps of a routine vehicle oil change and fluid level inspection. Focused on learning clean, safe procedures and identifying simple engine bay components.
+                                </p>
+                                <a onclick="switchToLogView()" class="project-link">
+                                    View Log Details &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>Let's build something cool together. Reach out at yared.sintu298@gmail.com</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <div id="log-view" style="display: none;">
+        <div class="container">
+            <header style="background: none; border: none; padding: 20px 0 0 0;">
+                <a onclick="switchToPortfolioView()" class="back-link">&larr; Back to Portfolio</a>
+            </header>
+
+            <section class="log-header">
+                <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Basic Oil & Fluid Maintenance Log</h1>
+                <p style="color: #a0aec0;">A hands-on study documenting standard vehicle service checks and engine bay safety.</p>
+            </section>
+
+            <main class="log-container">
+                <div class="log-meta">
+                    <div class="meta-item"><span class="meta-label">Objective:</span> Understand routine fluid management and standard component identification.</div>
+                    <div class="meta-item"><span class="meta-label">Focus Areas:</span> Shop safety, fluid specifications, waste management.</div>
+                </div>
+
+                <div class="log-step">
+                    <div class="step-num">Step 01</div>
+                    <h3 class="step-title">Safety Prep & Vehicle Setup</h3>
+                    <p class="step-details">Parked on flat ground, set the parking brake, and put wheel chocks behind the rear tires. Located the correct lift points under the frame rail, safely raised the vehicle using a hydraulic floor jack, and secured it onto heavy-duty jack stands before working underneath.</p>
+                </div>
+
+                <div class="log-step">
+                    <div class="step-num">Step 02</div>
+                    <h3 class="step-title">Draining Old Oil</h3>
+                    <p class="step-details">Positioned an oil drain pan underneath the engine oil pan. Used a box-end wrench to loosen the oil pan drain plug, carefully removing it by hand to let the old oil drain completely. Inspected the crush washer on the plug and replaced it with a fresh one to avoid oil leaks.</p>
+                </div>
+
+                <div class="log-step">
+                    <div class="step-num">Step 03</div>
+                    <h3 class="step-title">Replacing the Oil Filter</h3>
+                    <p class="step-details">Located the oil filter assembly and used a filter wrench to loosen it. Carefully pulled down the filter to catch any trapped oil. Before spinning on the brand new filter, smeared a light coat of fresh engine oil onto its black rubber gasket to make sure it creates an airtight seal against the engine block.</p>
+                </div>
+
+                <div class="log-step">
+                    <div class="step-num">Step 04</div>
+                    <h3 class="step-title">Adding Fresh Fluid & Checking Levels</h3>
+                    <p class="step-details">Tightened down the drain plug and new filter to proper specifications. Moved to the engine bay, pulled the oil filler cap, and poured in the recommended amount of fresh motor oil using a clean funnel. Ran the engine for a minute, shut it off, and checked the dipstick level to make sure the fluid was right between the minimum and maximum lines.</p>
+                </div>
+
+                <div class="log-step">
+                    <div class="step-num">Step 05</div>
+                    <h3 class="step-title">Secondary Fluid Inspections</h3>
+                    <p class="step-details">Concluded the log by performing visibility checks on auxiliary engine bay fluids. Checked the brake fluid reservoir level, the bright pink/green engine coolant expansion tank, and topped off the windshield washer fluid tank.</p>
+                </div>
+            </main>
+
+            <footer style="background: none; border-top: 1px solid #2d3748; padding: 30px 0;">
+                <p>Log compiled by Yared Sintayehu &bull; Web Design Final Project</p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        // View Swapping Logic
+        var portfolioView = document.getElementById('portfolio-view');
+        var logView = document.getElementById('log-view');
+
+        function switchToLogView() {
+            portfolioView.style.display = 'none';
+            logView.style.display = 'block';
+            window.scrollTo(0, 0); // Scroll to top of log
+        }
+
+        function switchToPortfolioView() {
+            logView.style.display = 'none';
+            portfolioView.style.display = 'block';
+        }
+
+        // Project Filtering Logic
+        var btnAll = document.getElementById('btn-all');
+        var btnGames = document.getElementById('btn-games');
+        var btnMechanical = document.getElementById('btn-mechanical');
+
+        var cardGames1 = document.getElementById('card-games-1');
+        var cardMechanical1 = document.getElementById('card-mechanical-1');
+
+        function clearActiveButtons() {
+            btnAll.className = 'filter-btn';
+            btnGames.className = 'filter-btn';
+            btnMechanical.className = 'filter-btn';
+        }
+
+        function showAll() {
+            clearActiveButtons();
+            btnAll.className = 'filter-btn active';
+            
+            cardGames1.style.display = 'block';
+            cardMechanical1.style.display = 'block';
+        }
+
+        function showCategory(category) {
+            clearActiveButtons();
+            
+            if (category === 'games') {
+                btnGames.className = 'filter-btn active';
+                cardGames1.style.display = 'block';
+                cardMechanical1.style.display = 'none';
+            }
+            
+            if (category === 'mechanical') {
+                btnMechanical.className = 'filter-btn active';
+                cardGames1.style.display = 'none';
+                cardMechanical1.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

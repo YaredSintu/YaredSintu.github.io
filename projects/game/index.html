@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece Adventure</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <h1>One Piece: The Grand Line Awaits</h1>
+    <div id="game-container">
+        
+        <div id="stats">
+            <span id="player-hp-text">Luffy HP: 100/100</span>
+            <span id="crew-list" class="crew-text">Crew: None</span>
+            <span id="location-text">Location: A barrel at sea</span>
+        </div>
+
+        <div id="story-box">
+            You burst out of a barrel! You are Monkey D. Luffy, and you're going to be King of the Pirates! But first, a pirate named Alvida is attacking!
+        </div>
+
+        <div id="story-controls" class="controls" style="display: none;">
+            <button onclick="nextStage()">Continue</button>
+        </div>
+
+        <div id="combat-controls" class="controls">
+            <button onclick="playerAction('pistol')">Gum-Gum Pistol (Medium)</button>
+            <button onclick="playerAction('rocket')">Gum-Gum Rocket (Heavy/Risky)</button>
+            <button onclick="playerAction('dodge')">Dodge (Defend)</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
