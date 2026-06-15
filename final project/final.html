@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yared Sintayehu | Portfolio</title>
     <style>
+      
       html,
       body,
       h1,
@@ -77,8 +78,6 @@
         clear: both;
         display: table;
       }
-
-      /* Hero Styles Added */
       .hero {
         padding: 80px 0 60px 0;
         text-align: center;
@@ -123,38 +122,65 @@
         font-weight: bold;
         margin: 5px;
       }
+
+      
+      .projects-section {
+        padding: 60px 0;
+      }
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+      .section-title-line {
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: #4299e1;
+        margin: 10px auto 0 auto;
+        border-radius: 2px;
+      }
+      .projects-grid {
+        width: 100%;
+      }
+      .project-card {
+        background-color: #222222;
+        border: 1px solid #2d3748;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: block;
+      }
+      .project-visual {
+        height: 180px;
+        background-color: #1a1a1a;
+        text-align: center;
+        border-bottom: 1px solid #2d3748;
+        padding-top: 45px;
+      }
+      .project-info {
+        padding: 24px;
+      }
     </style>
   </head>
   <body>
     <div id="portfolio-view" style="display: block">
-      <header>
-        <div class="container">
-          <nav class="clearfix">
-            <div class="logo">YARED SINTAYEHU</div>
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
       <main>
-        <section class="hero" id="about">
+        <section class="projects-section" id="projects">
           <div class="container">
-            <div class="avatar-container">YS</div>
-            <h1>Yared Sintayehu</h1>
-            <p>
-              I am a student programmer interested in web development and car
-              mechanics. I enjoy creating choice-based logic paths in my code
-              and learning the fundamental concepts of basic vehicle
-              maintenance.
-            </p>
-            <div class="social-tags">
-              <span class="badge">Basic Auto Mechanics</span>
-              <span class="badge">JavaScript</span>
-              <span class="badge">HTML5 Canvas</span>
-              <span class="badge">CSS Flexbox</span>
+            <h2 class="section-title">
+            <span class="section-title-line"></span>
+            </h2>
+            <div class="projects-grid" id="projectsGrid">
+              <article class="project-card" id="card-games-1">
+                <div class="project-visual"></div>
+                <div class="project-info"></div>
+              </article>
+              <article class="project-card" id="card-mechanical-1">
+                <div class="project-visual"></div>
+                <div class="project-info"></div>
+              </article>
             </div>
           </div>
         </section>
