@@ -108,20 +108,6 @@
         max-width: 600px;
         margin: 0 auto 28px auto;
       }
-      .social-tags {
-        text-align: center;
-      }
-      .badge {
-        display: inline-block;
-        background-color: #2d3748;
-        color: #e2e8f0;
-        border: 1px solid #2d3748;
-        padding: 5px 14px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: bold;
-        margin: 5px;
-      }
 
       .projects-section {
         padding: 60px 0;
@@ -261,7 +247,6 @@
         font-size: 0.95rem;
       }
 
-      /* New Footer Styles */
       footer {
         background-color: #1a1a1a;
         border-top: 1px solid #2d3748;
@@ -297,12 +282,6 @@
               currently learning the fundamental concepts of basic vehicle
               maintenance.
             </p>
-            <div class="social-tags">
-              <span class="badge">Basic Auto Mechanics</span>
-              <span class="badge">JavaScript</span>
-              <span class="badge">HTML5 Canvas</span>
-              <span class="badge">CSS Flexbox</span>
-            </div>
           </div>
         </section>
 
@@ -387,7 +366,6 @@
         </section>
       </main>
 
-      <!-- Added Footer to Portfolio -->
       <footer>
         <div class="container">
           <p>
@@ -482,7 +460,6 @@
           </div>
         </main>
 
-        <!-- Added Footer to Log View -->
         <footer
           style="
             background: none;
@@ -544,7 +521,7 @@
         }
       }
 
-      // New ctx Canvas Drawing Logic
+      // 2D Canvas Drawing Context Work
       var gCanvas = document.getElementById("gameCanvas");
       if (gCanvas) {
         var ctxG = gCanvas.getContext("2d");
@@ -562,7 +539,7 @@
       }
 
       var aCanvas = document.getElementById("autoCanvas");
-      if (autoCanvas) {
+      if (aCanvas) {
         var ctxA = aCanvas.getContext("2d");
 
         ctxA.fillStyle = "#4299e1";
