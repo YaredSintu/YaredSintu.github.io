@@ -210,7 +210,6 @@
         font-size: 0.95rem;
       }
 
-      /* New Log Details Styles */
       .log-header {
         padding: 40px 0;
         border-bottom: 1px solid #2d3748;
@@ -258,6 +257,16 @@
         margin-bottom: 10px;
       }
       .step-details {
+        color: #a0aec0;
+        font-size: 0.95rem;
+      }
+
+      /* New Footer Styles */
+      footer {
+        background-color: #1a1a1a;
+        border-top: 1px solid #2d3748;
+        padding: 40px 0;
+        text-align: center;
         color: #a0aec0;
         font-size: 0.95rem;
       }
@@ -368,20 +377,33 @@
                     Focused on learning clean, safe procedures and identifying
                     simple engine bay components.
                   </p>
-                  <a href="#" class="project-link">View Log Details &rarr;</a>
+                  <a onclick="switchToLogView()" class="project-link"
+                    >View Log Details &rarr;</a
+                  >
                 </div>
               </article>
             </div>
           </div>
         </section>
       </main>
+
+      <!-- Added Footer to Portfolio -->
+      <footer>
+        <div class="container">
+          <p>
+            Let's build something cool together. Reach out at
+            yared.sintu298@gmail.com
+          </p>
+        </div>
+      </footer>
     </div>
 
-    <!-- New Log Details View (Hidden by default) -->
     <div id="log-view" style="display: none">
       <div class="container">
         <header style="background: none; border: none; padding: 20px 0 0 0">
-          <a href="#" class="back-link">&larr; Back to Portfolio</a>
+          <a onclick="switchToPortfolioView()" class="back-link"
+            >&larr; Back to Portfolio</a
+          >
         </header>
         <section class="log-header">
           <h1 style="font-size: 2.2rem; margin-bottom: 10px">
@@ -459,10 +481,35 @@
             </p>
           </div>
         </main>
+
+        <!-- Added Footer to Log View -->
+        <footer
+          style="
+            background: none;
+            border-top: 1px solid #2d3748;
+            padding: 30px 0;
+          "
+        >
+          <p>Log compiled by Yared Sintayehu</p>
+        </footer>
       </div>
     </div>
 
     <script>
+      var portfolioView = document.getElementById("portfolio-view");
+      var logView = document.getElementById("log-view");
+
+      function switchToLogView() {
+        portfolioView.style.display = "none";
+        logView.style.display = "block";
+        window.scrollTo(0, 0);
+      }
+
+      function switchToPortfolioView() {
+        logView.style.display = "none";
+        portfolioView.style.display = "block";
+      }
+
       var btnAll = document.getElementById("btn-all");
       var btnGames = document.getElementById("btn-games");
       var btnMechanical = document.getElementById("btn-mechanical");
@@ -495,6 +542,43 @@
           cardGames1.style.display = "none";
           cardMechanical1.style.display = "block";
         }
+      }
+
+      // New ctx Canvas Drawing Logic
+      var gCanvas = document.getElementById("gameCanvas");
+      if (gCanvas) {
+        var ctxG = gCanvas.getContext("2d");
+
+        ctxG.fillStyle = "#cfba97";
+        ctxG.beginPath();
+        ctxG.arc(60, 65, 24, 0, 2 * Math.PI);
+        ctxG.fill();
+
+        ctxG.fillStyle = "#c53030";
+        ctxG.fillRect(36, 60, 48, 8);
+
+        ctxG.fillStyle = "#cfba97";
+        ctxG.fillRect(25, 68, 70, 6);
+      }
+
+      var aCanvas = document.getElementById("autoCanvas");
+      if (autoCanvas) {
+        var ctxA = aCanvas.getContext("2d");
+
+        ctxA.fillStyle = "#4299e1";
+        ctxA.fillRect(55, 30, 10, 60);
+
+        ctxA.beginPath();
+        ctxA.arc(60, 30, 15, 0, 2 * Math.PI);
+        ctxA.fill();
+
+        ctxA.beginPath();
+        ctxA.arc(60, 90, 15, 0, 2 * Math.PI);
+        ctxA.fill();
+
+        ctxA.fillStyle = "#1a1a1a";
+        ctxA.fillRect(53, 10, 14, 15);
+        ctxA.fillRect(53, 95, 14, 15);
       }
     </script>
   </body>
